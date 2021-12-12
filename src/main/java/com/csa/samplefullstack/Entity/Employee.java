@@ -8,12 +8,12 @@ import javax.persistence.*;
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int employeeID;
+    private long employeeID;
     private String name;
     private String department;
     private String location;
 
-    public Employee(int employeeID, String name, String department, String location) {
+    public Employee(long employeeID, String name, String department, String location) {
         this.employeeID = employeeID;
         this.name = name;
         this.department = department;
@@ -24,11 +24,11 @@ public class Employee {
 
     }
 
-    public int getEmployeeID() {
+    public long getEmployeeID() {
         return employeeID;
     }
 
-    public void setEmployeeID(int employeeID) {
+    public void setEmployeeID(long employeeID) {
         this.employeeID = employeeID;
     }
 
